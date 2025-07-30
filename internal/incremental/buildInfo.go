@@ -457,3 +457,15 @@ func (b *BuildInfo) GetCompilerOptions(buildInfoDirectory string) *core.Compiler
 	}
 	return options
 }
+
+func (b *BuildInfo) IsEmitPending(resolved *tsoptions.ParsedCommandLine, buildInfoDirectory string) bool {
+	// Some of the emit files like source map or dts etc are not yet done
+	if !resolved.CompilerOptions().NoEmit.IsTrue() || resolved.CompilerOptions().GetEmitDeclarations() {
+		pendingEmit := getPendingEmitKindWithOptions(resolved.CompilerOptions(), b.GetCompilerOptions(buildInfoDirectory))
+		if resolved.CompilerOptions().NoEmit.IsTrue() {
+			pendingEmit |= FileEmitKindDtsErrors
+		}
+		return pendingEmit != 0
+	}
+	return false
+}

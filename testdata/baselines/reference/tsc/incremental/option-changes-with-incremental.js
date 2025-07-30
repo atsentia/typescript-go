@@ -139,6 +139,7 @@ exports.d = b_1.b;
   "size": 1256
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 *refresh*    /home/src/tslibs/TS/Lib/lib.d.ts
 *refresh*    /home/src/workspaces/project/a.ts
@@ -261,6 +262,7 @@ exports.d = b_1.b;
   "size": 1285
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -367,6 +369,7 @@ exports.d = b_1.b;
   "size": 1256
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -480,6 +483,7 @@ export declare const d = 10;
   "size": 1735
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 (stored at emit) /home/src/workspaces/project/a.ts
@@ -606,6 +610,7 @@ export declare const d = 10;
   "size": 1757
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -616,6 +621,7 @@ tsgo
 ExitStatus:: Success
 Output::
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -723,6 +729,7 @@ const aLocal = 100;
   "size": 1705
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 *refresh*    /home/src/workspaces/project/a.ts
 Signatures::
@@ -835,6 +842,7 @@ Output::
   "size": 1758
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -845,6 +853,7 @@ tsgo
 ExitStatus:: Success
 Output::
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -974,6 +983,7 @@ exports.d = b_1.b;
   "size": 1740
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -1108,6 +1118,7 @@ exports.d = b_1.b;
   "size": 1734
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -1234,6 +1245,7 @@ exports.d = b_1.b;
   "size": 1705
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -1344,6 +1356,7 @@ Output::
   "size": 1758
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::
 
@@ -1354,5 +1367,6 @@ tsgo --declaration --declarationMap
 ExitStatus:: Success
 Output::
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::

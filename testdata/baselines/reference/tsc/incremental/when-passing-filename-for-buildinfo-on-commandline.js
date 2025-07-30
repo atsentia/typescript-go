@@ -83,6 +83,7 @@ exports.x = void 0;
 exports.x = 10;
 
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 *refresh*    /home/src/tslibs/TS/Lib/lib.d.ts
 *refresh*    /home/src/workspaces/project/src/main.ts
@@ -95,5 +96,6 @@ tsgo --incremental --tsBuildInfoFile .tsbuildinfo --explainFiles
 ExitStatus:: Success
 Output::
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::

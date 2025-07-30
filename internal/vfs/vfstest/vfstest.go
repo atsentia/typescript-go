@@ -67,15 +67,19 @@ func FromMap[File any](m map[string]File, useCaseSensitiveFileNames bool) vfs.FS
 	}
 
 	mfs := make(fstest.MapFS, len(m))
-	for p, f := range m {
+	// Sorted creation to ensure times are always guaranteed to be in order.
+	keys := slices.Collect(maps.Keys(m))
+	slices.SortFunc(keys, comparePathsByParts)
+	for _, p := range keys {
+		f := m[p]
 		checkPath(p)
 
 		var file *fstest.MapFile
 		switch f := any(f).(type) {
 		case string:
-			file = &fstest.MapFile{Data: []byte(f)}
+			file = &fstest.MapFile{Data: []byte(f), ModTime: time.Now()}
 		case []byte:
-			file = &fstest.MapFile{Data: f}
+			file = &fstest.MapFile{Data: f, ModTime: time.Now()}
 		case *fstest.MapFile:
 			file = f
 		default:
@@ -195,8 +199,9 @@ func (m *mapFS) remove(path string) error {
 
 func Symlink(target string) *fstest.MapFile {
 	return &fstest.MapFile{
-		Data: []byte(target),
-		Mode: fs.ModeSymlink,
+		Data:    []byte(target),
+		Mode:    fs.ModeSymlink,
+		ModTime: time.Now(),
 	}
 }
 
@@ -320,7 +325,8 @@ func (m *mapFS) mkdirAll(p string, perm fs.FileMode) error {
 
 	for _, dir := range toCreate {
 		m.setEntry(dir, m.getCanonicalPath(dir), fstest.MapFile{
-			Mode: fs.ModeDir | perm&^umask,
+			Mode:    fs.ModeDir | perm&^umask,
+			ModTime: time.Now(),
 		})
 	}
 

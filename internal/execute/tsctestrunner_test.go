@@ -76,7 +76,7 @@ func (test *tscInput) run(t *testing.T, scenario string) {
 		sys.baselineFSwithDiff(baselineBuilder)
 		result := test.executeCommand(sys, baselineBuilder, test.commandLineArgs)
 		sys.serializeState(baselineBuilder)
-		sys.baselineProgram(baselineBuilder, result.IncrementalProgram, result.Watcher)
+		sys.baselinePrograms(baselineBuilder, result.IncrementalProgram, result.Watcher)
 
 		for index, do := range test.edits {
 			sys.clearOutput()
@@ -97,7 +97,7 @@ func (test *tscInput) run(t *testing.T, scenario string) {
 					result.Watcher.DoCycle()
 				}
 				sys.serializeState(baselineBuilder)
-				sys.baselineProgram(baselineBuilder, editResult.IncrementalProgram, result.Watcher)
+				sys.baselinePrograms(baselineBuilder, editResult.IncrementalProgram, result.Watcher)
 			})
 			wg.Queue(func() {
 				// Compute build with all the edits

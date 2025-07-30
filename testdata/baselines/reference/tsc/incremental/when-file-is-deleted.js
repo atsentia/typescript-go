@@ -117,6 +117,7 @@ exports.D = D;
   "size": 1299
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 *refresh*    /home/src/tslibs/TS/Lib/lib.d.ts
 *refresh*    /home/src/workspaces/project/file1.ts
@@ -174,5 +175,6 @@ Output::
   "size": 1120
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 Signatures::

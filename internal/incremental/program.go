@@ -50,6 +50,7 @@ type TestingData struct {
 	SemanticDiagnosticsPerFile           map[tspath.Path]*diagnosticsOrBuildInfoDiagnosticsWithFileName
 	OldProgramSemanticDiagnosticsPerFile map[tspath.Path]*diagnosticsOrBuildInfoDiagnosticsWithFileName
 	UpdatedSignatureKinds                map[tspath.Path]SignatureUpdateKind
+	ConfigFilePath                       string
 }
 
 func (p *Program) GetTestingData(program *compiler.Program) TestingData {
@@ -57,6 +58,7 @@ func (p *Program) GetTestingData(program *compiler.Program) TestingData {
 		SemanticDiagnosticsPerFile:           p.snapshot.semanticDiagnosticsPerFile,
 		OldProgramSemanticDiagnosticsPerFile: p.semanticDiagnosticsPerFile,
 		UpdatedSignatureKinds:                p.updatedSignatureKinds,
+		ConfigFilePath:                       p.snapshot.options.ConfigFilePath,
 	}
 }
 

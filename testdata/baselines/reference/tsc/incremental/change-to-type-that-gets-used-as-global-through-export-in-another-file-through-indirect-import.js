@@ -165,6 +165,7 @@ Object.defineProperty(exports, "ConstantNumber", { enumerable: true, get: functi
   "size": 1836
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 *refresh*    /home/src/tslibs/TS/Lib/lib.d.ts
 *refresh*    /home/src/workspaces/project/class1.ts
@@ -285,6 +286,7 @@ exports.default = 2;
   "size": 1836
 }
 
+/home/src/workspaces/project/tsconfig.json::
 SemanticDiagnostics::
 *refresh*    /home/src/workspaces/project/constants.ts
 Signatures::
@@ -299,11 +301,12 @@ Diff:: Currently there is issue with d.ts emit for export default = 1 to widen i
 +declare const a = 1;
 --- nonIncremental errors.txt
 +++ incremental errors.txt
-@@ -1,7 +0,0 @@
+@@ -1,8 +0,0 @@
 -[96mclass1.ts[0m:[93m1[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType '1' is not assignable to type '2'.
 -
 -[7m1[0m const a: MagicNumber = 1;
 -[7m [0m [91m      ~[0m
+-
 -
 -Found 1 error in class1.ts[90m:1[0m
 -
